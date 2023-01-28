@@ -1,0 +1,1 @@
+C:\Users\filip\OneDrive\Projects\Clock\Clock\Clock.csproj;x86

@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="Clock.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Clock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Grid>
+        <TextBlock Name="timeTxt" Text="SubHeader" Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical" >
+                <StackPanel Orientation="Vertical" Name="topCmmds">
+                    <Button Name="full" Content="&#xE92D;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}" Click="full_Click" />
+                    <Button Name="big" Content="&#xE8E9;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}" Click="big_Click" RightTapped="small_Click"/>
+                </StackPanel>
+                <Button Name="dismiss" Content="&#xE76C;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5" Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}" Click="dismiss_Click"/>
+                <Button Name="show" Content="&#xE76B;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5,0,0,5" Visibility="Collapsed"  Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}" Click="dismiss_Click"/>
+                <StackPanel Orientation="Vertical" Name="btmCmmds">
+                    <Button Name="color" Content="&#xE790;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5"  Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}"/>
+                    <ToggleButton Name="settings" Content="&#xE713;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" IsChecked="False" Foreground="{ThemeResource ButtonForegroundThemeBrush}" Click="settings_Click" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="sett" Width="150" Height="215" Visibility="Collapsed">
+                <Button Name="hhmm" Content="h:mm" Width="140" Padding="10" CornerRadius="5" Margin="5"  Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}" Click="hhmm_Click" />
+                <Button Name="hhmmss" Content="H:mm" Width="140" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}" Click="hhmm_Click"/>
+                <Button Name="h" Content="H:mm:ss" Width="140" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}" Click="hhmm_Click"/>
+                <Button Name="ampm" Content="h:mm:ss tt" Width="140" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}" Click="hhmm_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

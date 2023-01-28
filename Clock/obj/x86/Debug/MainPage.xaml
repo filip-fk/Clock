@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Clock.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Clock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Grid>
+        <TextBlock x:ConnectionId='2' Name="timeTxt" Text="SubHeader" Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical" >
+                <StackPanel x:ConnectionId='8' Orientation="Vertical" Name="topCmmds">
+                    <Button x:ConnectionId='14' Name="full" Content="&#xE92D;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}"                    />
+                    <Button x:ConnectionId='15' Name="big" Content="&#xE8E9;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}"                                            />
+                </StackPanel>
+                <Button x:ConnectionId='9' Name="dismiss" Content="&#xE76C;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5" Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"                      />
+                <Button x:ConnectionId='10' Name="show" Content="&#xE76B;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5,0,0,5" Visibility="Collapsed"  Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"                      />
+                <StackPanel x:ConnectionId='11' Orientation="Vertical" Name="btmCmmds">
+                    <Button x:ConnectionId='12' Name="color" Content="&#xE790;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5"  Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}"/>
+                    <ToggleButton x:ConnectionId='13' Name="settings" Content="&#xE713;" FontFamily="Segoe MDL2 Assets" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" IsChecked="False" Foreground="{ThemeResource ButtonForegroundThemeBrush}"                        />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:ConnectionId='3' Name="sett" Width="150" Height="215" Visibility="Collapsed">
+                <Button x:ConnectionId='4' Name="hhmm" Content="h:mm" Width="140" Padding="10" CornerRadius="5" Margin="5"  Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}"                    />
+                <Button x:ConnectionId='5' Name="hhmmss" Content="H:mm" Width="140" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}"                   />
+                <Button x:ConnectionId='6' Name="h" Content="H:mm:ss" Width="140" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}"                   />
+                <Button x:ConnectionId='7' Name="ampm" Content="h:mm:ss tt" Width="140" Padding="10" CornerRadius="5" Margin="5" Background="Transparent" Foreground="{ThemeResource ButtonForegroundThemeBrush}"                   />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
+
